@@ -1,0 +1,7 @@
+<h1>TotalCost</h1>
+<%= form_with model: Plan, url: home_index_path, local: true do |f| %>
+  <%= f.label :contract_date, "契約日" %><br>
+  <%= f.datetime_field :contract_date %><br>
+  
+  <%= f.submit '決定' %>
+<% end %>
