@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require "test_helper"
 
-class OptionTest < ActiveSupport::TestCase
+class DiscountTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

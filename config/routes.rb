@@ -1,5 +1,8 @@
+# -*- encoding : utf-8 -*-
 Rails.application.routes.draw do
-  get 'home/index'
+  root to: 'home#index'
+  
+  post '/', to: 'home#create'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

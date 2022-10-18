@@ -1,7 +1,19 @@
 <h1>TotalCost</h1>
-<%= form_with model: Plan, url: home_index_path, local: true do |f| %>
+<%= form_with model: @result, url: root_path, local: true do |f| %>
   <%= f.label :contract_date, "契約日" %><br>
   <%= f.datetime_field :contract_date %><br>
-  
+  <%= f.label :termination_date, "解約日" %><br>
+  <%= f.datetime_field :termination_date %><br>
+
+  <%= f.label :plan, 'プラン' %><br>
+  <%= f.text_field :plan_name, placeholder:" , 区切り" %><br>
+  <%= f.label :option, 'オプション' %><br>
+  <%= f.text_field :option_name, placeholder:" , 区切り" %><br>
+
+  <%= f.collection_check_boxes :plans, Plan.all, :id, :name %>
+  <br>
   <%= f.submit '決定' %>
 <% end %>
+
+<p>合計<p>
+<%= @select_plan_price %>

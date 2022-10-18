@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
-class CreatePlans < ActiveRecord::Migration[7.0]
+class CreateDiscounts < ActiveRecord::Migration[7.0]
   def change
-    create_table :plans do |t|
+    create_table :discounts do |t|
       t.string :name
       t.integer :price
 
