@@ -1,0 +1,32 @@
+<h1>Simulator</h1>
+<%= form_with url: root_path, local: true do |f| %>
+  <%= f.label :contract_date, "契約日" %><br>
+  <%= f.datetime_field :contract_date %><br>
+  <%= f.label :termination_date, "解約日" %><br>
+  <%= f.datetime_field :termination_date %><br>
+
+  <!-- <%= f.label :plan, 'プラン' %><br> -->
+  <!--<%= f.text_field :plan_name, placeholder:" , 区切り" %><br> -->
+  <!--<%= f.label :option, 'オプション' %><br> -->
+  <!--<%= f.text_field :option_name, placeholder:" , 区切り" %><br> -->
+
+  <h3>データプラン</h3>
+  <p>※1つのみ選択が必須</p>
+  <%= f.collection_check_boxes :plans, @plans, :id, :name %>
+
+  <br>
+  <h3>オプション</h3>
+  <p>※複数選択可</p>
+  <%= f.collection_check_boxes :options, @options, :id, :name %>
+  <br>
+  <br>
+  <%= f.submit '計算する' %>
+  <%= link_to 'リセット', root_path %>
+<% end %>
+
+<div>
+  <p>合計 
+    <%= @result %>
+  </p>
+<div>
+
