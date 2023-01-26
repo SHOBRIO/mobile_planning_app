@@ -31,6 +31,10 @@ gem 'pry-rails'
 
 gem 'rufo'
 
+gem 'mysql2'
+
+gem 'dotenv-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
