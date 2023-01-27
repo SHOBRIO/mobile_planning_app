@@ -29,4 +29,3 @@ production:
   username: cldctuppt00g69try056begoa
   password: <%= ENV['DATABASE_PRODUCTION_PASSWORD'] %>
   url: <%= ENV['DATABASE_PRODUCTION_URL'] %>
-  
