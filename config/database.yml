@@ -25,7 +25,7 @@ test:
 
 production:
   <<: *default
-  database: cldctuppu00g89try4094bryj
-  username: cldctuppt00g69try056begoa
+  database: cldeq5e8600ii9try8p5ghxjy
+  username: cldeq5e8400ig9try0amph01i
   password: <%= ENV['DATABASE_PRODUCTION_PASSWORD'] %>
   url: <%= ENV['DATABASE_PRODUCTION_URL'] %>
